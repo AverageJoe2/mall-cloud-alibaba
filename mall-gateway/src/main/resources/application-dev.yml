@@ -40,3 +40,16 @@ secure:
       - /admin/info
       - /admin/logout
       - /minio/upload
+jwt:
+  tokenHeader: Authorization
+  secret: mall-admin-secret
+  expiration: 604800
+  tokenHead: Bearer
+redis:
+  database: mall
+  key:
+    admin: 'ums:admin'
+    token: 'ums:token'
+    resourceList: 'ums:resourceList'
+  expire:
+    common: 86400 # 24小时
